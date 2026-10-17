@@ -38,20 +38,20 @@ covers it in `tests/test_demo_scenarios.py`.
 
 ## Captured evidence (screenshots)
 
-These were captured from a real browser walkthrough of `python app.py` on
-2026-10-17, with the default local Ollama backend, against a **throwaway**
-database (the live `data/projectops.db` was never touched). They live in
-`docs/screenshots/`.
+These were captured from a real browser walkthrough of the current interface
+(deep-navy + latte theme) on 2026-10-17, with the default local Ollama backend,
+against a **throwaway** database (the live `data/projectops.db` was never
+touched). They live in `docs/screenshots/`.
 
 | File | Shows |
 |------|-------|
-| `01_health_red_run_trace.png` | Live WF-01 result: deterministic `Health: RED`, `requires_human_review`, and the in-app run-trace panel (revisions 2/2, parallel workers). |
-| `02_input_guardrail_block.png` | Scenario 7: injection blocked before Intake — "No analysis ran and nothing changed." |
-| `03_task_action_comment_executed.png` | A low-risk `create_project_comment` executes with tool confirmation. |
-| `04_high_impact_held_pending.png` | Scenario 11 pending state: high-impact `assign_task` held — "NOT executed." |
-| `05_approval_detail.png` | Approvals tab evidence summary for a pending request. |
-| `06_approved_executed.png` | Scenario 11 approve path: revalidate → execute → verified. |
-| `07_rejected_no_mutation.png` | Scenario 11 reject path: "Resolved without execution." |
+| `01_health_dashboard.png` | Live WF-01 result: deterministic `Health: RED`, `requires_human_review`, the metric cards, and the grounded analysis. |
+| `02_task_actions.png` | A low-risk `create_project_comment` executes with a tool confirmation and workflow stages. |
+| `03_approvals_pending.png` | Scenario 11 pending state: high-impact `assign_task` held — `PENDING_REVIEW`, "not yet executed." |
+| `04_workflow_trace.png` | Scenario 12: the in-app run-trace panel (route, evidence engine, revision count). |
+| `05_approval_approved.png` | Scenario 11 approve path: revalidate → execute → `EXECUTED` / `VERIFIED`. |
+| `06_approval_rejected.png` | Scenario 11 reject path: `REJECTED` with execution `NOT EXECUTED`. |
+| `07_input_guardrail_block.png` | Scenario 7: injection blocked before Intake — "No analysis ran and nothing changed." |
 
 ## Running all 12 offline
 
