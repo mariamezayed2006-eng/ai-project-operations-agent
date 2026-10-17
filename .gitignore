@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Env / secrets — never commit real keys
+.env
+.env.*
+!.env.example
+
+# Private specification documents — not published
+*.docx
+docs/*.docx
+docs/private/
+
+# Local prompt overrides (the committed demo templates are public)
+prompts/*.local.txt
+prompts/*.local.md
+
+# SQLite demo + session stores — always regenerated via seed
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+data/*.db
+sessions.db
+
+# Gradio / OS / IDE local state
+.gradio/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
