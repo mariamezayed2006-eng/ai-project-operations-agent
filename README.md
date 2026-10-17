@@ -156,6 +156,15 @@ Three tabs:
 3. **Approvals** — select a pending request, read its evidence summary, then
    *Approve* (revalidate → execute → verify) or *Reject* (zero mutation).
 
+### Interface & theme
+
+The demo uses a deep-navy + latte theme (background `#0A1220`, cards `#111D30`,
+accent `#C6A982`) applied through Gradio's theme API plus a small custom
+stylesheet; the palette is defined once in `app.py` (`PALETTE`, `build_theme`,
+`CUSTOM_CSS`). This is presentation only — every screen is driven by the same
+runtime, guardrails, and approval logic. Semantic colors are reserved for real
+states (green healthy, amber warning/review, red critical).
+
 ## Testing
 
 ```powershell
